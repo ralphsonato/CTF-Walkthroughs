@@ -1,4 +1,4 @@
-# Write-up: CTF Agent Sudo (TryHackMe)
+# Write-up: Agent Sudo - TryHackMe
 > **Data:** 02 de Março de 2026  
 > **Target IP:** `10.67.136.239`
 
