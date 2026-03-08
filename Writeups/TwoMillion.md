@@ -152,3 +152,6 @@ uid=0(root) gid=0(root) groups=0(root)
 * **Root.txt:** `[*******************]`
 
 O laboratório reforça a importância de ferramentas de proxy como o **Burp Suite** para descobrir injeções invisíveis no front-end, além de demonstrar que restrições locais de Kernel e partições (como no `/tmp`) exigem adaptação e conhecimento da arquitetura do Linux, utilizando recursos como o `/dev/shm`.
+
+**Escrito por:** [Ralph Sonato](https://www.linkedin.com/in/ralph-sonato-77086b16b/)  
+*Analista de Cibersegurança*
