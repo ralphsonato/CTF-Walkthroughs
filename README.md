@@ -5,21 +5,21 @@
   <p><i>Analista de Cibersegurança | Pentester | Red Team</i></p>
 </div>
 
----
+
 
 
 
 > Este repositório serve como uma documentação viva da minha jornada em **Cibersegurança**. Aqui guardo os relatórios técnicos (write-ups) de laboratórios explorados, detalhando desde o reconhecimento até a escalação de privilégios.
 
----
 
-Este espaço é focado em consolidar o conhecimento prático adquirido em plataformas como:
+
+### Plataformas:
 
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-FF5722?style=for-the-badge&logo=tryhackme&logoColor=white) ![HackTheBox](https://img.shields.io/badge/HackTheBox-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black)
 
 ---
 
-### ⚠️ Disclaimer
+### Atenção!
 
 Todo o conteúdo deste repositório é para fins **estritamente educacionais e éticos**. A exploração de vulnerabilidades foi realizada em ambientes controlados, isolados e com a devida autorização das plataformas. Não encorajo nem me responsabilizo pelo uso indevido das técnicas aqui descritas.
 
