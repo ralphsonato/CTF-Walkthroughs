@@ -1,5 +1,4 @@
 
-# 🚩 CTF-Walkthroughs: A Jornada até o Root
 
 <div align="center">
   <a href="SEU_LINK_DO_LINKEDIN_AQUI"><img src="https://img.shields.io/badge/LinkedIn-Ralph_Sonato-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
