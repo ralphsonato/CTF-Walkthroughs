@@ -4,9 +4,11 @@ Este repositório serve como uma documentação viva da minha jornada em **Ciber
 
 
 
-### Plataformas:
-
-![TryHackMe](https://img.shields.io/badge/TryHackMe-FF5722?style=for-the-badge&logo=tryhackme&logoColor=white) ![HackTheBox](https://img.shields.io/badge/HackTheBox-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black)
+<div align="center">
+  <h3>Plataformas</h3>
+  <img src="https://img.shields.io/badge/TryHackMe-FF5722?style=for-the-badge&logo=tryhackme&logoColor=white">
+  <img src="https://img.shields.io/badge/HackTheBox-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black">
+</div>
 
 ---
 
