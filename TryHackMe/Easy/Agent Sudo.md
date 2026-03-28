@@ -91,5 +91,8 @@ A enumeração de privilégios locais revelou uma vulnerabilidade de configuraç
 
 ---
 
-**Escrito por:** [Ralph Sonato](https://github.com/ralphsonato)  
-*Analista de Cibersegurança*
+<div align="center">
+  <p>Escrito por:</p>
+  <a href="https://www.linkedin.com/in/ralph-sonato-77086b16b/"><img src="https://img.shields.io/badge/LinkedIn-Ralph_Sonato-0e76a8?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <p><i>Analista de Cibersegurança</i></p>
+</div>
