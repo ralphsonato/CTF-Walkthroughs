@@ -63,6 +63,7 @@ sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
 ---
 
 <div align="center">
-  <a href="SEU_LINK_DO_LINKEDIN_AQUI"><img src="https://img.shields.io/badge/LinkedIn-Ralph_Sonato-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <p><i>Analista de Cibersegurança | Pentester | Red Team</i></p>
+  <p>Escrito por:</p>
+  <a href="https://www.linkedin.com/in/ralph-sonato-77086b16b/"><img src="https://img.shields.io/badge/LinkedIn-Ralph_Sonato-0e76a8?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <p><i>Analista de Cibersegurança</i></p>
 </div>
