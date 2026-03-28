@@ -6,8 +6,12 @@ Este repositório serve como uma documentação viva da minha jornada em **Ciber
 
 <div align="center">
   <h3>Plataformas</h3>
-  <img src="https://img.shields.io/badge/TryHackMe-FF5722?style=for-the-badge&logo=tryhackme&logoColor=white">
-  <img src="https://img.shields.io/badge/HackTheBox-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black">
+  <a href="https://tryhackme.com/p/ralphsonato" target="_blank">
+    <img src="https://img.shields.io/badge/TryHackMe-FF5722?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe">
+  </a>
+  <a href="https://app.hackthebox.com/users/2376949" target="_blank">
+    <img src="https://img.shields.io/badge/HackTheBox-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black" alt="HackTheBox">
+  </a>
 </div>
 
 ---
