@@ -7,7 +7,7 @@
 
 ---
 
-> ## ⚠️ MÁQUINA ATIVA — CONTEÚDO PARCIALMENTE OCULTADO
+> ## ⚠️ MÁQUINA ATIVA - CONTEÚDO PARCIALMENTE OCULTADO
 >
 > **Reactor** faz parte da **Season 11 (May–Aug 2026)** do HackTheBox e ainda está ativa.
 >
