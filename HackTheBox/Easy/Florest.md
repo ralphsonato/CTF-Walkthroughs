@@ -9,35 +9,8 @@ O desafio **Forest** é um Domain Controller Windows Server 2016 com Active Dire
 
 ---
 
-## 🗺️ Cadeia de Ataque
 
-```
-Nmap → DC Windows Server 2016 (portas 88, 389, 445, 5985)
-         ↓
-RPC anônimo → enumdomusers → 6 usuários reais encontrados
-         ↓
-AS-REP Roasting → svc-alfresco sem Kerberos pré-autenticação
-         ↓
-John + rockyou → senha: s3rvice
-         ↓
-Evil-WinRM → shell como svc-alfresco
-         ↓
-BloodHound/SharpHound → mapeamento do AD
-         ↓
-Account Operators → cria usuário ralph
-         ↓
-Exchange Windows Permissions → WriteDACL no domínio
-         ↓
-PowerView → Add-ObjectACL → DCSync rights
-         ↓
-impacket-secretsdump → dump de todos os hashes NTDS
-         ↓
-Pass-the-Hash → Administrator → root.txt 🏆
-```
-
----
-
-## 🔍 Fase 1 - Reconhecimento
+## Fase 1 - Reconhecimento
 
 ### Configuração inicial
 
@@ -76,7 +49,7 @@ PORT     STATE SERVICE      VERSION
 
 ---
 
-## 🔍 Fase 2 - Enumeração de Usuários
+## Fase 2 - Enumeração de Usuários
 
 ### RPC Anônimo
 
@@ -101,7 +74,7 @@ O que chamou minha atenção aqui: `svc-alfresco` é uma **service account**. Es
 
 ---
 
-## 💥 Fase 3 - AS-REP Roasting
+## Fase 3 - AS-REP Roasting
 
 ### Criando wordlist de usuários
 
@@ -152,7 +125,7 @@ s3rvice          ($krb5asrep$23$svc-alfresco@HTB.LOCAL)
 
 ---
 
-## 🖥️ Fase 4 - Acesso Inicial
+## Fase 4 - Acesso Inicial
 
 ### Evil-WinRM
 
@@ -188,7 +161,7 @@ O `Account Operators` é a chave aqui - esse grupo permite criar e modificar con
 
 ---
 
-## 🔍 Fase 5 - BloodHound
+## Fase 5 - BloodHound
 
 ### Coleta de dados com SharpHound
 
@@ -239,7 +212,7 @@ Administrator
 
 ---
 
-## 🔝 Fase 6 - Privilege Escalation
+## Fase 6 - Privilege Escalation
 
 ### Criando um novo usuário
 
@@ -312,7 +285,7 @@ htb.local\santi:1152:aad3b435b51404eeaad3b435b51404ee:483d4c70248510d8e0acb6066c
 
 ---
 
-## 🏆 Fase 7 - Pass-the-Hash = Root
+## Fase 7 - Pass-the-Hash = Root
 
 ```bash
 evil-winrm -i 10.129.1.191 -u Administrator -H 32693b11e6aa90eb43d32c72a07ceea6
